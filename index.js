@@ -1,5 +1,10 @@
 //QUESTION ONE
 
+// Create a constructor user that have name, stepswalked as properties
+// create a totasteps method which will calculateand return total number of steps
+// create an averagesteps method which will return the average steps per day
+// create an object to access the methods of the constructor
+// 
 function User(name, stepsWalked){
     this.name = name;
     this.stepsWalked = stepsWalked;
@@ -25,6 +30,11 @@ user.averageSteps();
 console.log(user.averageSteps());
 
 // QUESTIN TWO
+// Create a recipe constructor that have properties names, ingredients as an array and cooktime
+// Create a displayrecipe method that will show all name and ingredients
+// Create a method isquickmeal that returns true is cooktime is less than 30minutes
+// Create an object to acess the methods of the constructor
+
 function Recipe(name,ingredients,cookTime){
     this.name = name;
     this.ingredients = ingredients;
@@ -50,28 +60,34 @@ console.log(recipe.quickMeal());
 
 
 //QUESTION THREE
-function Car(model,mileage,serviceHistory){
-    this.model = model;
-    this.mileage = mileage;
-    this.serviceHistory = serviceHistory;
-    this.addService = function(date){
+// Create a car object that has propertiesmodel,mileage,servicehistory as an array
+// Create method addservice that will add a new service to the record
+// Create method lastservicedate that will return the most recent service date
+
+const car = {
+    model:"Toyota",
+    mileage: 12000,
+    serviceHistory: ["12th-02-2025","20th-05-2025"],
+    addService: function(date){
         this.serviceHistory.push(date);
         console.log(car.serviceHistory);
     },
     
-    this.lastServiceDate = function(){
+    lastServiceDate: function(){
         return this.serviceHistory.at(-1);
          
         }   
     };
    
-const car = new Car ("Toyota",12000,["12th-02-2025","20th-05-2025"]);
-
 console.log(car.addService("23rd-03-2024"));
 console.log(car.lastServiceDate());
 
 
 //QUESTION FOUR
+//Create an object with its ptoperty song as an array 
+//Create an addsong method that will take in title for adding songs
+//Create a removesong method that wil ltake in title for deleting a song from the array
+//Create a listsongs methodto print all songs 
 
 const playlist = {
     songs:["Tuza","Jaribu","Sabrina"],
@@ -99,7 +115,7 @@ console.log(playlist.listOfSongs())
 //create a method that adds completed lesson to completed lessons
 //create a method that will keep progress of number of lessons already completed
 //create an object to access the constructor
-//use me object to access the methods of constructor
+//Use the object to access the methods of constructor
 
 function Course(title,lessons,completedLessons){
     this.title = title;
